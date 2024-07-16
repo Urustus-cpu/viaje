@@ -1,0 +1,46 @@
+*{
+    background-color: aliceblue;
+}
+body{
+    display: grid;
+    grid-template-rows: 100%; 
+    grid-template-columns: 100%;
+}
+
+.cabeza{
+    display: flex;
+    background-color:antiquewhite;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+.cabeza h1 {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: antiquewhite; 
+}
+
+.cabeza .login form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    background-color: antiquewhite;
+}
+.login label{
+    background-color: antiquewhite;
+}
+.container{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.error-message {
+    background-color: antiquewhite;
+    color: red;
+    font-weight: bold;
+}

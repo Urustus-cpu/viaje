@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_hotel.css">
+    <title>Ingreso de Hoteles</title>
+    <script>
+        function validar() {
+            let id_hotel = document.getElementById('id_hotel').value;
+            let nombre = document.getElementById('nombre').value;
+            let ubicacion = document.getElementById('ubicacion').value;
+            let habitacion_disponibles = document.getElementById('habitacion_disponibles').value;
+            let tarifa_noche = document.getElementById('tarifa_noche').value;
+
+            if (id_hotel === '' || nombre === '' || ubicacion === '' || habitacion_disponibles === '' || tarifa_noche === '' ) {
+                alert('Por favor ingrese todos los campos');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ingreso de hotel</h1>
+    <form class="formulario" action="procesar_hotel.php" method="post" onsubmit="return validar()">
+        <label for="id_hotel">ID hotel:</label>
+        <input type="text" id="id_hotel" name="id_hotel" required><br>
+        <label for="nombre">nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="ubicacion">ubicacion:</label>
+        <input type="text" id="ubicacion" name="ubicacion" required><br>
+        <label for="habitacion_disponibles">Habitacion disponibles:</label>
+        <input type="number" id="habitacion_disponibles" name="habitacion_disponibles" required><br>
+        <label for="tarifa_noche">Precio Noche:</label>
+        <input type="number" id="tarifa_noche" name="tarifa_noche" required><br>
+        <button type="submit">Agregar Hotel</button>
+    </form>
+    
+</body>
+</html>
